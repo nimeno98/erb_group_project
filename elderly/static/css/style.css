@@ -1,0 +1,43 @@
+
+.custom-navbar {
+  background-color: #30caa0 !important;  
+}
+ 
+
+.nav-item.highlight .nav-link {
+  background-color: #30caa0 ; /* Change background color to orange */
+  color: white; /* Optional: Change text color for better contrast */
+}
+
+.nav-item.highlight .nav-link:hover {
+  background-color: darkorange; /* Optional: Change color on hover */
+  color: yellow; /* Optional: Change text color on hover */
+}
+
+
+/* Change background color of dropdown submenu items */
+.dropdown-menu .dropdown-item {
+  background-color: white;
+  color: black;
+  font-size: 1.2rem;  /* Increase dropdown item font size */
+  padding: 0.5rem 1rem;  /* Add padding around text */
+}
+
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: darkorange; /* Change background color */
+  color: black; /* Optional: Change text color for better contrast */
+} 
+ 
+
+ 
+.img-large {
+  width: 100%;
+  height: auto;
+}
+ 
+
+/* Reduce margin of the container */
+.container {
+  margin: 0; /* Adjust the margin as needed */
+}

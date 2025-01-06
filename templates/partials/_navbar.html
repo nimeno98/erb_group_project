@@ -1,0 +1,57 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top">
+    <div class="container">
+        <!-- fix index.html later -->
+        <a class="navbar-brand" href="{% url 'index' %}">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item {% if request.path == '/' %}active{% endif %} highlight">
+                    <a class="nav-link" href="{% url 'index' %}">主頁</a>
+                </li>
+                <li class="nav-item {% if 'staff' in request.path %}active{% endif %} highlight">
+                    <a class="nav-link" href="{% url 'index' %}">員工簡介</a>
+                </li>
+                <li class="nav-item {% if 'staff' in request.path %}active{% endif %} highlight">
+                    <a class="nav-link" href="{% url 'index' %}">入住条件</a>
+                </li>
+                <li class="nav-item {% if 'staff' in request.path %}active{% endif %} highlight">
+                    <a class="nav-link" href="{% url 'index' %}">申請資助</a>
+                </li>
+                <li class="nav-item dropdown {% if 'staff' in request.path %}active{% endif %} highlight">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicedropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        服務
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicedropdown">
+                        <a class="dropdown-item" href="#">服務範圍</a>
+                        <a class="dropdown-item" href="#">服務流程</a>
+                        <a class="dropdown-item" href="#">營養餐單</a>
+                        <a class="dropdown-item" href="#">护理服务</a>
+                        <a class="dropdown-item" href="#">項目收費</a>
+                        <!-- Add more submenu items here -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown {% if 'staff' in request.path %}active{% endif %} highlight">
+                    <a class="nav-link dropdown-toggle" href="#" id="bookingdropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        預約
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="bookingdropdown">
+                        <a class="dropdown-item" href="{% url 'application' %}">預約參觀</a>
+                        <a class="dropdown-item" href="{% url 'booking' %}">預約入住</a>
+                    </div>
+                </li>
+                <li class="nav-item {% if 'staff' in request.path %}active{% endif %} highlight">
+                    <a class="nav-link" href="{% url 'index' %}">院舍生活设施</a>
+                </li>
+                <li class="nav-item {% if 'staff' in request.path %}active{% endif %} highlight">
+                    <a class="nav-link" href="{% url 'index' %}">地点资讯</a>
+                </li>
+                <li class="nav-item {% if 'staff' in request.path %}active{% endif %} highlight">
+                    <a class="nav-link" href="{% url 'index' %}">聯絡我們</a>
+            </ul>
+        </div>
+    </div>
+</nav> 

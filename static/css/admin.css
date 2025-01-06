@@ -1,0 +1,42 @@
+#header {
+    height: 50px;
+    background: #2c4262;
+    color: #fff;
+}
+
+#branding h1 {
+    color : #fff;
+}
+
+a:link, a:visited {
+    color: #2c4262;
+}
+
+div.breadcrumbs {
+    background: #30caa0;
+    color: #2c4262;
+}
+
+.module h2, .module caption, .inlinegroup h2 {
+    background: #30caa0;
+}
+
+.button, input[type="submit"], 
+input[type="button"], 
+.submit-row input,
+a.button {
+    background: #2c4262;
+    color: #fff;
+}
+
+
+/* Ensure textarea visibility */
+.form-group textarea {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 100px;
+    width: 100%;
+    margin-bottom: 1rem;
+}

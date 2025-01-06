@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} | Booking {% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="display-4">預約參觀</h1>
+    <br>
+    <p class="mb-5">請填寫以下資料，我們會盡快與您聯絡。</p>
+    
+    
+    <form method="post" action="{% url 'application' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">電子郵件</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">電話號碼</label>
+            <input type="text" class="form-control" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="application_message">留言</label>
+            <textarea class="form-control" id="application_message" name="application_message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">提交預約</button>
+    </form>
+</div>
+{% endblock %}
