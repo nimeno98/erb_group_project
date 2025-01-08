@@ -2,8 +2,38 @@
 {% load static %}
 {% block title %} | Booking {% endblock %}
 {% block content %}
-<div class="container mt-5">
-    <h1 class="display-4">預約參觀</h1>
+
+
+<style>
+    .btn-large-custom {
+        display: inline-block;
+        background-color: #30caa0 !important;
+        color: #ffffff !important;
+        font-size: 20px !important;
+        padding: 15px 20px !important;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        text-align: left !important;  /* Add this line */
+        width: 130px;  /* Reduced width */
+    }
+
+    .btn-large-custom:hover {
+        background-color: #30caa0 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+</style>
+
+
+
+<div class="container mt-3">
+
+    <div class="btn btn-large-custom text-left">預約參觀</div>
+    <p></p>
     <br>
     <p class="mb-5">請填寫以下資料，我們會盡快與您聯絡。</p>
     
@@ -26,7 +56,7 @@
             <label for="application_message">留言</label>
             <textarea class="form-control" id="application_message" name="application_message" rows="4" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">提交預約</button>
+        <button type="submit" class="btn btn-secondary">提交預約</button>
     </form>
 </div>
 {% endblock %}

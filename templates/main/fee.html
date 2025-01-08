@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} | Booking {% endblock %}
+{% block content %}
+
+
+<style>
+    .btn-large-custom {
+        display: inline-block;
+        background-color: #30caa0 !important;
+        color: #ffffff !important;
+        font-size: 20px !important;
+        padding: 15px 20px !important;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        text-align: left !important;  /* Add this line */
+        width: 130px;  /* Reduced width */
+    }
+
+    .btn-large-custom:hover {
+        background-color: #30caa0 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+</style>
+
+ 
+    <div class="container">
+
+        <button class="btn btn-large-custom text-left" type="button">安老院收費</button>
+     
+
+        <div class="content">
+            <p>安老院的收費因地區、服務質量、設施和護理水平等因素而異。一般來說，安老院的收費可以分為以下幾個方面：</p>
+            <div class="list">
+                <div class="list-item"><strong>基本住宿費用</strong>：這通常是安老院的基本收費，包括房間的租金和基本設施的使用。</div>
+                <p></p>
+                <div class="list-item"><strong>護理服務費用</strong>：根據老人的健康狀況和需要的護理程度，這部分費用可能會有所不同。需要專業護理的老人通常需要支付更高的費用。</div>
+                <p></p>
+                <div class="list-item"><strong>餐飲費用</strong>：大多數安老院會提供餐飲服務，這部分費用通常包含在總費用中，但有些地方可能會單獨收取。</div>
+                <p></p>
+                <div class="list-item"><strong>額外服務費用</strong>：如康樂活動、物理治療、醫療服務等，這些可能需要額外收費。</div>
+                
+            </div>
+        </div>
+        <div class="content" mt-auto mb-5>
+            <p>在香港，安老院的收費範圍可能從每月幾千元到幾萬元不等，而在中國大陸的不同城市，收費也會有很大差異。建議您具體查詢當地的安老院，了解其收費標準和服務內容。</p>
+        </div>
+    </div>
+
+{% endblock %}

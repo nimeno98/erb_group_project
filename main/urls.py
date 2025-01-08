@@ -6,7 +6,8 @@ urlpatterns = [
     path('about',views.about,name='about'),
     path('meal',views.meal,name='meal'),
     path('qa',views.qa,name='qa'),
-    path('finapply',views.finapply,name='finapply'),    
+    path('finapply',views.finapply,name='finapply'),  
+    path('fee',views.fee,name='fee'),  
     path('booking/', views.booking, name='booking'),
     path('application/', views.application, name='application'),
    

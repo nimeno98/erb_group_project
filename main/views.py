@@ -18,6 +18,12 @@ def meal(request):
 def finapply(request):
     return render(request,'main/finapply.html')
  
+                        
+def fee(request):
+    return render(request,'main/fee.html')
+
+
+
 def qa(request):
     return render(request,'main/qa.html')
 

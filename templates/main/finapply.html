@@ -1,12 +1,37 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block title %} | 申請資助 {% endblock %}
-
 {% block content %}
-<div class="container mt-5">
-    <h1 class="display-4 mb-4">申請資助</h1>
 
+<style>
+    .btn-large-custom {
+        display: inline-block;
+        background-color: #30caa0 !important;
+        color: #ffffff !important;
+        font-size: 20px !important;
+        padding: 15px 20px !important;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        text-align: left !important;  /* Add this line */
+        width: 130px;  /* Reduced width */
+    }
+
+    .btn-large-custom:hover {
+        background-color: #30caa0 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+</style>
+
+
+<div class="container mt-3"> 
+
+    <button class="btn btn-large-custom text-left" type="button">申請資助</button>
+     
     <table class="table table-bordered mb-5">
         <tbody>
             <tr>
@@ -15,7 +40,9 @@
         </tbody>
     </table>
 
-    <h2 class="mb-3">申請條件</h2>
+ 
+    <button class="btn btn-large-custom text-left" type="button">申請條件</button>
+     
     <table class="table table-bordered mb-5">
         <tbody>
             <tr>
@@ -32,7 +59,11 @@
             </tr>
         </tbody>
     </table>
-    <h2 class="mb-3">申請流程</h2>
+ 
+
+    <button class="btn btn-large-custom text-left" type="button">申請流程</button>
+     
+ 
     <table class="table table-bordered mb-5">
         <tbody>
             <tr>
@@ -55,8 +86,10 @@
             </tr>
         </tbody>
     </table>
+     
+    <button class="btn btn-large-custom text-left" type="button">重要事項</button>
+     
     
-    <h2 class="mb-3">重要事項</h2>
     <table class="table table-bordered mb-5">
         <tbody>
             <tr>
