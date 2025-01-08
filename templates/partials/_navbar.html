@@ -19,7 +19,7 @@
                     <a class="nav-link" href="{% url 'index' %}">入住条件</a>
                 </li>
                 <li class="nav-item {% if 'staff' in request.path %}active{% endif %} highlight">
-                    <a class="nav-link" href="{% url 'index' %}">申請資助</a>
+                    <a class="nav-link" href="{% url 'finapply' %}">申請資助</a>
                 </li>
                 <li class="nav-item dropdown {% if 'staff' in request.path %}active{% endif %} highlight">
                     <a class="nav-link dropdown-toggle" href="#" id="servicedropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,9 +28,11 @@
                     <div class="dropdown-menu" aria-labelledby="servicedropdown">
                         <a class="dropdown-item" href="#">服務範圍</a>
                         <a class="dropdown-item" href="#">服務流程</a>
-                        <a class="dropdown-item" href="#">營養餐單</a>
+                        <a class="dropdown-item" href="{% url 'meal' %}">營養餐單</a>
                         <a class="dropdown-item" href="#">护理服务</a>
                         <a class="dropdown-item" href="#">項目收費</a>
+                        <a class="dropdown-item" href="{% url 'qa' %}">常見問題</a>
+                        
                         <!-- Add more submenu items here -->
                     </div>
                 </li>

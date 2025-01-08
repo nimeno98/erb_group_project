@@ -12,6 +12,16 @@ def index(request):
 def about(request):
     return render(request,'main/about.html')
 
+def meal(request):
+    return render(request,'main/meal.html')
+
+def finapply(request):
+    return render(request,'main/finapply.html')
+ 
+def qa(request):
+    return render(request,'main/qa.html')
+
+
 def application(request):
     if request.method == 'POST':
         name = request.POST['name']
