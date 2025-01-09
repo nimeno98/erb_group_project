@@ -17,7 +17,7 @@ def meal(request):
 
 def finapply(request):
     return render(request,'main/finapply.html')
- 
+
 def opinion(request):
     return render(request,'main/opinion.html')
 
@@ -30,11 +30,11 @@ def staffs(request):
 def qa(request):
     return render(request,'main/qa.html')
 
-def service(request):
-    return render(request,'main/service.html')
+def services(request):
+    return render(request,'main/services.html')
 
-def moovin(request):
-    return render(request,'main/moovin.html')
+def movein(request):
+    return render(request,'main/movein.html')
 
 def application(request):
     if request.method == 'POST':

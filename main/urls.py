@@ -12,7 +12,7 @@ urlpatterns = [
     path('booking/', views.booking, name='booking'),
     path('opinion/', views.opinion, name='opinion'),
     path('application/', views.application, name='application'),
-    path( 'services', views.service, name = 'services' ),
-    path( 'moovin', views.moovin, name = 'moovin' )
+    path( 'services', views.services, name = 'services' ),
+    path( 'movein', views.movein, name = 'movein' )
 ]
 
