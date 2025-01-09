@@ -30,6 +30,11 @@ def staffs(request):
 def qa(request):
     return render(request,'main/qa.html')
 
+def service(request):
+    return render(request,'main/service.html')
+
+def moovin(request):
+    return render(request,'main/moovin.html')
 
 def application(request):
     if request.method == 'POST':
