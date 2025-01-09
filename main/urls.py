@@ -7,8 +7,10 @@ urlpatterns = [
     path('meal',views.meal,name='meal'),
     path('qa',views.qa,name='qa'),
     path('finapply',views.finapply,name='finapply'),  
-    path('fee',views.fee,name='fee'),  
+    path('fee',views.fee,name='fee'), 
+    path('staffs',views.staffs,name='staffs'), 
     path('booking/', views.booking, name='booking'),
+    path('opinion/', views.opinion, name='opinion'),
     path('application/', views.application, name='application'),
    
 ]

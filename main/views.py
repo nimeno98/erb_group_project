@@ -18,11 +18,14 @@ def meal(request):
 def finapply(request):
     return render(request,'main/finapply.html')
  
-                        
+def opinion(request):
+    return render(request,'main/opinion.html')
+
 def fee(request):
     return render(request,'main/fee.html')
 
-
+def staffs(request):
+    return render(request,'main/staffs.html')
 
 def qa(request):
     return render(request,'main/qa.html')
@@ -54,6 +57,72 @@ def application(request):
         return redirect('index')  # Redirect to the home page after submission
 
     return render(request, 'main/application.html')
+
+
+def opinion(request):
+    if request.method == 'POST':
+        try:
+            # Get form data
+            name = request.POST.get('name')
+            age = request.POST.get('age')
+            gender = request.POST.get('gender')
+            contact = request.POST.get('contact')
+            email = request.POST.get('email')
+            stayduration = request.POST.get('stayduration')
+            accommodation = request.POST.get('accommodation')
+            dinning = request.POST.get('dinning')
+            safety = request.POST.get('safety')
+            staff = request.POST.get('staff')
+            overallsatisfaction = request.POST.get('overallsatisfaction')
+            suggestions = request.POST.get('suggestion')
+
+            # Validate required fields
+            required_fields = [name, age, gender, contact, email, stayduration, 
+                             accommodation, dinning, safety, staff, overallsatisfaction]
+            
+            if not all(required_fields):
+                messages.error(request, '請填寫所有必需欄位。')
+                return redirect('opinion')
+
+            # Prepare email content
+            subject = '養心園安老院舍 - 意見收集'
+            email_message = f'''
+申請人資料：
+姓名: {name}
+年齡: {age}
+性別: {gender}
+聯絡方式: {contact}
+電子郵件: {email}
+預計入住日期: {stayduration}
+
+服務評分：
+住宿滿意度: {accommodation}
+餐飲滿意度: {dinning}
+安全滿意度: {safety}
+員工滿意度: {staff}
+總體滿意度: {overallsatisfaction}
+
+其他意見：
+{suggestions if suggestions else "無"}
+'''
+            # Send email
+            send_mail(
+                subject,
+                email_message,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.DEFAULT_FROM_EMAIL, email],
+                fail_silently=False
+            )
+
+            messages.success(request, '您的意見已提交，感謝你的意見。')
+            return redirect('index')
+
+        except Exception as e:
+            print('Error:', str(e))
+            messages.error(request, '發送電子郵件時出現錯誤，請稍後再試。')
+            return redirect('opinion')
+
+    return render(request, 'main/opinion.html')
 
 
 
