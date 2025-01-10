@@ -1,6 +1,13 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top">
     <div class="container">
+
+    <!-- Floating Button -->
+    <a href="{% url 'application' %}" class="floating-btn">
+        <i class="fas fa-envelope"></i>
+        <span class="floating-btn-text">預約參觀</span>
+    </a>
+
         <!-- fix index.html later -->
         <a class="navbar-brand" href="{% url 'index' %}">
         </a>
@@ -53,7 +60,7 @@
                     <a class="nav-link" href="{% url 'index' %}">地点资讯</a>
                 </li>
                 <li class="nav-item {% if 'staff' in request.path %}active{% endif %} highlight">
-                    <a class="nav-link" href="{% url 'index' %}">聯絡我們</a>
+                    <a class="nav-link" href="{% url 'about' %}">關於我們</a>
             </ul>
         </div>
     </div>
